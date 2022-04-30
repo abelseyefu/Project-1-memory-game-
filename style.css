@@ -1,0 +1,19 @@
+.intro {
+    text-align: center;
+}
+#instructions {
+    font-family: 'Amatic SC', cursive;
+}
+#title {
+    font-family: 'Amatic SC', cursive;  
+    font-size: 60px;
+}
+.cards {
+    text-align: center;
+}
+.Timer {
+    text-align: center;
+}
+.reset {
+    text-align: center;
+}

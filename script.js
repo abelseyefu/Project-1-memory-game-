@@ -20,14 +20,56 @@ let cardArry = [card1, card2, card3, card4, card5, card5, card6, card7, card8, c
 //         return 
 //     })
 
-// console.log(card4)
-cardArry.forEach((card)=>{
-card.addEventListener("click", function (e) {
-    console.log(e.target.id)
-    card.setAttribute("src", "")
-    card.setAttribute("class", e.target.id)
-})
+let clicks = 0
+let selectedCards = []
+cardArry.forEach((card) => {
+    card.addEventListener("click", function (e) {
+        console.log(e.target.id)
+        card.setAttribute("src", "")
+        card.setAttribute("class", e.target.id)
+        clicks += 1
+        // if #of clicks =1 
+        if (clicks == 1) {
+            // start timer
+            console.log(selectedCards)
+
+            selectedCards.push(e.target)
+            
+
+        } else if (clicks == 2) {
+            console.log(selectedCards)
+            setTimeout(() => {
+                selectedCards.push(e.target)
+                flipCards()
+            }, 100)
+            function flipCards() {
+                if (selectedCards[0].dataset.card != selectedCards[1].dataset.card) {
+                    console.log(selectedCards)
+                    selectedCards[0].classList.add("back-red")
+                    selectedCards[1].classList.add('back-red')
+                }
+                    clicks = 0
+                    selectedCards = []
+            }
+
+
+
+
+
+
+
+
+        }
+        // start timer
+        // push card into selectedCards 
+        // else if # of clicks =2 
+        // check to see if its a match 
+        // if its a match then cards show
+        // if not then they dont
+        // reset the clicks = 0 
+        // reset selectedCard = 0
+    })
 })
 
 
-console.log(card1)
+

@@ -51,14 +51,6 @@ cardArry.forEach((card) => {
                     clicks = 0
                     selectedCards = []
             }
-
-
-
-
-
-
-
-
         }
         // start timer
         // push card into selectedCards 

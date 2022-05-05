@@ -25,11 +25,11 @@
 
     <div class="intro">
         <h1 id="title">Memory Game</h1>
-        <h2 id="instructions">From the 10 cards below, There are 5 card pairs. Match all cards to win! Select a card to
-            start the game.</h2>
+        <h2 id="instructions">From the 10 cards below, There are 5 card pairs. Match all cards with least amount of turns!
+            click any card to start.</h2>
     </div>        
-        <div class="Timer">
-            <h3 id="timer">00:00</h3>
+        <div class="turns">
+            <h3 id="numOfTurns">0</h3>
         </div>
 
         <div class="cards">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="reset">
-           <button type="button">Reset</button>
+           <button onclick="window.location.reload();">Reset</button>
         </div>
 
 
